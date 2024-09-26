@@ -1,6 +1,83 @@
 .destination-container {
-    background-image: url(/src/assets/images/destination/background-destination-desktop.jpg);
-    background-size: cover;
-    background-position: center;
-    
+  background-image: url(/src/assets/images/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: $nav-height;
+
+  .content {
+    margin: 48px 165px;
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+
+      text-transform: uppercase;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .destination {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 1110px;
+      column-gap: 30px;
+
+      .img-container {
+        padding: 127px 29.5px;
+      }
+      .content-container {
+        padding: 133px 47px;
+
+        .destination-nav {
+          text-transform: uppercase;
+          display: flex;
+          gap: 30px;
+
+          a{
+            border-bottom: 2px solid rgba(255, 255, 255,0);
+            padding-block: 0px 10px;
+            transition: border-bottom 300ms ease-in-out;
+          }
+          a:hover{
+            border-bottom: 2px solid rgba(255, 255, 255,0.5);
+          }
+          a.active{
+            border-bottom: 2px solid rgba(255, 255, 255,1);
+          }
+        }
+
+        h1 {
+          margin-block: 40px 14px;
+          text-transform: uppercase;
+          letter-spacing: -5px;
+        }
+        p.text-7, p.text-9,a{color: $blue-300;}
+        .line {
+          display: flex;
+          height: 1px;
+          align-self: stretch;
+          flex-grow: 0;
+          opacity: 0.25;
+          background-color: #fff;
+          margin-block: 38px;
+        }
+        .info {
+          text-transform: uppercase;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 24px;
+
+          .distance,.time{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+          }
+        }
+      }
+    }
+  }
 }
