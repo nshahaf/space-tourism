@@ -30,6 +30,7 @@
       }
       .content-container {
         padding: 133px 47px;
+        transition: all 200ms ease-in-out;
 
         .destination-nav {
           text-transform: uppercase;
@@ -80,4 +81,20 @@
       }
     }
   }
+
+  
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
 }
