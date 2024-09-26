@@ -10,13 +10,12 @@ html {
 
 body {
   font-size: 16px;
-}
-
-.app-container {
+  background-color: black;
   width: 100vw;
   height: 100vh;
-  position: relative;
 }
+
+
 
 h1,
 h2,
@@ -24,6 +23,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 400;
   margin: 0;
 }
 
@@ -49,11 +49,11 @@ a:hover {
 }
 
 button {
-  font-family: bellfair-regular;
+  font-family: bellefair-regular;
 }
 
 input {
-  font-family: bellfair-regular;
+  font-family: bellefair-regular;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

@@ -1,3 +1,11 @@
+.app-container {
+  max-width: 1440px;
+  height: 100vh;
+  height: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
 
   @include for-narrow-layout {
    
@@ -6,6 +14,7 @@
    
   }
   @include for-wide-layout {
+    
     
   }
 

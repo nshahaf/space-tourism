@@ -1,5 +1,62 @@
 .home-container {
-    background-image: url('/src/assets/images/home/background-home-desktop.jpg');
-    background-size: cover;
-    background-position: center;
+  background-image: url("/src/assets/images/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .center-content {
+    height: 100%;
+    padding: 128px 165px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+
+    .content {
+        height: 343px;
+
+        display: flex;
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            h3,h1{
+                text-transform: uppercase;
+            }
+            h3,p{
+                color: $blue-300;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            padding-left: 290px;
+
+            button {
+                text-transform: uppercase;
+                border-radius: 50%;
+                width: 272px;
+                height: 272px;
+            }
+        }
+
+    }
+  }
 }
+
+.Display-Button-States---Desktop-and-Tablet {
+    width: 272px;
+    height: 272px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border-radius: 999px;
+    background-color: #fff;
+  }
