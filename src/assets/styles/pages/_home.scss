@@ -40,6 +40,14 @@
                 border-radius: 50%;
                 width: 272px;
                 height: 272px;
+                cursor: pointer;
+                border: none;
+                box-shadow: 0px 0px 5px 80px rgba(255, 255, 255, 0); //0px 0px blur spread
+                transition: box-shadow 500ms;
+
+                &:hover {
+                    box-shadow: 0px 0px 5px 80px rgba(255, 255, 255, 0.1); //0px 0px blur spread
+                }
             }
         }
 

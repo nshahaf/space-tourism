@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function HomePage() {
+  const navigate = useNavigate()
   return (
     <div className="home-container page">
       <div className="center-content">
@@ -14,7 +17,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="button-container">
-            <button className="text-4">Explore</button>
+            <button className="text-4" onClick={()=> navigate('destination')}>Explore</button>
           </div>
 
         </div>
