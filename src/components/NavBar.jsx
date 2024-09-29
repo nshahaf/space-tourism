@@ -1,11 +1,12 @@
-import {NavLink } from "react-router-dom";
+import {NavLink, useNavigate } from "react-router-dom";
 import Logo from './../assets/icons/logo.svg?react';
 // import Hamburger from './../assets/icons/icon-hamburger.svg?react';
 
 export default function NavBar() {
+  const navigate = useNavigate()
   return (
     <div className="navbar-container">
-      <div className="logo"><Logo/></div>
+      <div className="logo" onClick={() => navigate('/')}><Logo/></div>
       <div className="line"></div>
       <nav className="text-8">
         <NavLink to="/"></NavLink>
