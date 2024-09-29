@@ -9,7 +9,7 @@ export default function DestinationPage({ dest }) {
     <div className="destination-container page">
       <div className="content">
         <h2 className="text-5">
-          <span>01</span>Pick your destination{" "}
+          <span>01</span>Pick your destination
         </h2>
         <AnimatePresence mode="wait">
           <div className="destination">

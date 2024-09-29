@@ -2,5 +2,71 @@
     background-image: url(/src/assets/images/technology/background-technology-desktop.jpg);
     background-size: cover;
     background-position: center;
+    color: white;
+    text-transform: uppercase;
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: 100%;
+        padding: 48px 0px 48px 165px;
+    }
+
+    h2{
+        display: flex;
+        gap: 20px;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 145px 520px 1fr;
+        height: 100%;
+        align-items: center;
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            a{
+                display: grid;
+                place-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: black;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+                &.active {
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+        .info{
+            color: $blue-300;
+            .text-3{
+                padding-block: 20px;
+                color: rgba(255, 255, 255, 0.9);
+            }
+            p{
+                text-transform: none;
+                padding-inline-end: 25px;
+                
+            }
+        }
+        .img-container{
+            // padding-block: 100px;
+            
+            img{
+                height: auto;
+                width: 100%;
+                
+            }
+        }
+
+    }
     
 }
