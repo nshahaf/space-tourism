@@ -3,63 +3,134 @@
   background-size: cover;
   background-position: center;
   color: white;
-  
-  
+
+
 
   .content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin: 48px auto;
-    max-width: 1110px;
+
+    gap: 65px;
+    max-width: 765px;
+    margin: 40px auto;
+    padding-inline: 34px;
+
+    @include for-wide-layout {
+      gap: 24px;
+      max-width: 1110px;
+      margin: 48px auto;
+      padding-inline: 0px;
+    }
+
     h2 {
       display: flex;
       align-items: center;
-      gap: 19px;
+
+      gap: 23px;
+      font-size: 20px;
+      letter-spacing: 3px;
+
+      @include for-wide-layout{
+        gap: 19px;
+        font-size: 28px;
+        letter-spacing: 4px;
+      }
 
       text-transform: uppercase;
+
       span {
         font-weight: bold;
       }
     }
 
     .destination {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 1110px;
-      column-gap: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include for-wide-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 1110px;
+        column-gap: 30px;
+      }
 
       .img-container {
-        padding: 127px 29.5px;
+        padding: 0;
+        width: 300px;
+
+        @include for-wide-layout {
+          padding: 127px 29.5px;
+          width: auto;
+        }
       }
+
       .content-container {
-        padding: 133px 47px;
         transition: all 200ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        text-align: center;
+        padding: 82px 47px;
+
+        @include for-wide-layout {
+          align-items: start;
+          text-align: start;
+          padding: 133px 47px;
+        }
 
         .destination-nav {
           text-transform: uppercase;
           display: flex;
           gap: 30px;
 
-          a{
-            border-bottom: 2px solid rgba(255, 255, 255,0);
+          a {
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
             padding-block: 0px 10px;
             transition: border-bottom 300ms ease-in-out;
           }
-          a:hover{
-            border-bottom: 2px solid rgba(255, 255, 255,0.5);
+
+          a:hover {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
           }
-          a.active{
-            border-bottom: 2px solid rgba(255, 255, 255,1);
+
+          a.active {
+            border-bottom: 2px solid rgba(255, 255, 255, 1);
           }
         }
 
         h1 {
-          margin-block: 40px 14px;
           text-transform: uppercase;
-          letter-spacing: -5px;
+          
+          margin-block: 28px 14px;
+          font-size: 5rem;
+          letter-spacing: 0px;
+
+          @include for-wide-layout{
+            margin-block: 40px 14px;
+            font-size: 6.25rem;
+            letter-spacing: -5px;
+
+          }
         }
-        p.text-7, p.text-9,a{color: $blue-300;}
+
+        p.text-7,
+        p.text-9,
+        a {
+          color: $blue-300;
+        }
+
+        p.text-9{
+          padding-inline: 45px;
+          font-size: 1rem;
+
+          @include for-wide-layout{
+            padding-inline: 0;
+            font-size: 1.125rem;
+          }
+        }
+
         .line {
           display: flex;
           height: 1px;
@@ -67,15 +138,26 @@
           flex-grow: 0;
           opacity: 0.25;
           background-color: #fff;
-          margin-block: 38px;
+          margin-block: 24px;
+
+          @include for-wide-layout{
+            margin-block: 38px;
+          }
         }
+
         .info {
           text-transform: uppercase;
           display: grid;
           grid-template-columns: 1fr 1fr;
           column-gap: 24px;
+          padding-inline: 40px;
+          @include for-wide-layout{
+            padding-inline: 0px;
 
-          .distance,.time{
+          }
+
+          .distance,
+          .time {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -86,19 +168,22 @@
     }
   }
 
-  
+
 }
 
 .fade-enter {
   opacity: 0;
 }
+
 .fade-enter-active {
   opacity: 1;
   transition: opacity 500ms linear;
 }
+
 .fade-exit {
   opacity: 1;
 }
+
 .fade-exit-active {
   opacity: 0;
 }
