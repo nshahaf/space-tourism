@@ -3,9 +3,13 @@
   background-size: cover;
   background-position: center;
   color: white;
-  padding-top: $nav-height;
+  
+  
 
   .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     margin: 48px 165px;
     h2 {
       display: flex;
@@ -19,7 +23,6 @@
     }
 
     .destination {
-      margin-top: 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 1110px;
