@@ -1,15 +1,13 @@
 .app-container {
-  max-width: 1440px;
-  height: 100vh;
+  max-width: 1200px;
   height: 1024px;
   margin: 0 auto;
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .app-container {
     max-width: 1440px;
-    height: 100vh;
     height: 1024px;
     margin: 0 auto;
     position: relative;

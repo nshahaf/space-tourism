@@ -10,7 +10,9 @@
         flex-direction: column;
         gap: 24px;
         height: 100%;
-        padding: 48px 0px 48px 165px;
+        padding: 48px 0px 48px 0px;
+        max-width: 1275px;
+        margin-inline: auto 0;
     }
 
     h2{

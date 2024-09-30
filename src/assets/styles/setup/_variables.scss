@@ -8,15 +8,17 @@ $clr04: hsl(278, 68%, 11%);
 $blue-900: rgb(11,13,23);
 $blue-300: rgb(208,214,249);
 $white: rgb(255,255,255);
+
 // Breakpoints
 $mobile-breakpoint: 375px;
 $narrow-breakpoint: 800px;
 $normal-breakpoint: 1000px;
-$wide-breakpoint: 1440px;
+$wide-breakpoint: 1200px;
 $desktop-breakpoint: 1440px;
 
 
 
 // layout vars
-$nav-height: 136px;
+$nav-height: 96px;
+$nav-top-margin: 40px;
 

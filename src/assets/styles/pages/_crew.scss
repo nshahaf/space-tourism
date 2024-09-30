@@ -6,13 +6,16 @@
   main {
     height: 100%;
     color: white;
-    padding: 48px 165px;
+    // padding: 48px 165px;
+    padding: 48px 0px;
   }
 
   .content {
     height: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 1110px;
+    margin-inline: auto;
 
     .text-5 {
       display: flex;

@@ -5,7 +5,10 @@
   align-items: center;
   width: 100%;
   height: 96px;
-  margin-top: 40px;
+  
+  @include for-wide-layout{
+    margin-top: 40px;
+  }
 
   .logo {
     margin-inline: 64px 34px;
