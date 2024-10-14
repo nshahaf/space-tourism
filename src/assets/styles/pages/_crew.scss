@@ -6,7 +6,7 @@
   main {
     height: 100%;
     color: white;
-    padding: 40px 0px;
+    padding: 40px 0px 0px;
     overflow-y: hidden;
     @include for-wide-layout {
       padding: 48px 0px;
@@ -45,29 +45,24 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-
-
-    @include for-wide-layout {
-      text-align: left;
-    }
-
+    height: 100%;
 
     @include for-wide-layout {
       flex-direction: row;
+      text-align: left;
       gap: 32px;
       flex: 1;
-      height: 100%;
     }
 
     .info-container {
-      gap: 55px;
-      flex: 1;
+      gap: 24px;
       display: flex;
       flex-direction: column;
       align-content: center;
 
       @include for-wide-layout {
         gap: 40px;
+        flex: 1;
       }
 
       .info {
@@ -106,9 +101,12 @@
           padding-inline: 80px;
           font-size: 16px;
 
+          height:116px ;
+
           @include for-wide-layout {
             padding-inline: 0px;
             font-size: 18px;
+            height: auto;
 
           }
         }
@@ -155,9 +153,8 @@
       position: relative;
       flex: 1;
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: center;
-
       img {
         width: 400px;
         max-height: 700px;
@@ -165,10 +162,12 @@
       }
 
       @include for-wide-layout {
+        align-items: center;
         justify-content: right;
         img {
           width: 500px;
           max-height: 700px;
+
           filter: saturate(80%);
         $fade-start: 75%;
         -webkit-mask-image: linear-gradient(to bottom,
