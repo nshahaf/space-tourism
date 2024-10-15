@@ -1,5 +1,6 @@
 .navbar-container {
   position: absolute;
+  z-index: 2;
   display: flex;
   align-items: center;
   width: 100%;
@@ -26,12 +27,19 @@
     height: 100%;
     padding-block: 30px;
 
-    .logo{
+    .logo,.hamburger {
       align-self: start;
     }
 
     .line {
       display: none;
+    }
+
+    .hamburger{
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: 40px;
     }
 
     nav {
@@ -78,7 +86,6 @@
       z-index: 2;
       left: 30px;
     }
-
     nav {
       display: flex;
       align-items: center;
@@ -90,7 +97,7 @@
       padding-inline: 110px 64px;
 
      
-
+      
       span {
         font-weight: 600;
       }
@@ -113,6 +120,10 @@
       a.active {
         border-bottom: 3px solid rgba(255, 255, 255, 1);
       }
+    }
+
+    .hamburger{
+      display: none;
     }
 
   }
