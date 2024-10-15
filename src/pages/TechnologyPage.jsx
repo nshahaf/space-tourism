@@ -1,10 +1,18 @@
-import { useState } from "react"
+import {useEffect, useState } from "react"
 import { motion, AnimatePresence } from 'framer-motion';
-
+import useBreakpoint from "../hooks/useBreakpoint";
 
 export default function TechnologyPage({ tech }) {
   const [idx, setIdx] = useState(0)
   const { name, images, description: desc } = tech[idx]
+  const [imgSrc, setImgSrc] = useState(images.portrait); // Initialize with default image
+  const breakpoint = useBreakpoint(); // Get the current breakpoint
+  
+
+  useEffect(() => {
+    const newImgSrc = breakpoint === 'desktop' ? images.portrait : images.landscape;
+    setImgSrc(newImgSrc);
+  }, [breakpoint,images]); 
 
   const animationProps = {
     initial: { opacity: 0 },
@@ -12,7 +20,7 @@ export default function TechnologyPage({ tech }) {
     exit: { opacity: 0 },
     transition: { duration: 0.5, ease: "easeInOut" },
   }
-  
+
   return (
     <div className="technology-container page">
       <div className="content-container">
@@ -32,8 +40,7 @@ export default function TechnologyPage({ tech }) {
               <motion.p className="text-9" key={desc} {...animationProps}>{desc}</motion.p>
             </div>
             <div className="img-container">
-              {/* <img src={''} alt="" /> */}
-              <motion.img src={images.portrait} alt="" key={images.portrait} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} />
+              <motion.img src={imgSrc} alt="" key={imgSrc} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} />
             </div>
           </div>
         </AnimatePresence>
