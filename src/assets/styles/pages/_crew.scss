@@ -8,6 +8,7 @@
     color: white;
     padding: 40px 0px 0px;
     overflow-y: hidden;
+
     @include for-wide-layout {
       padding: 48px 0px;
     }
@@ -21,6 +22,7 @@
     margin-inline: auto;
     padding: 0 40px;
 
+
     @include for-wide-layout {
       max-width: 1110px;
     }
@@ -29,10 +31,13 @@
       display: flex;
       text-transform: uppercase;
       gap: 20px;
-      margin-bottom: 65px;
+      margin-bottom: 40px;
       font-size: 20px;
       letter-spacing: 3px;
-
+      
+      @include for-normal-layout{
+        margin-bottom: 65px;
+      }
       @include for-wide-layout {
         font-size: 28px;
         letter-spacing: 4px;
@@ -46,7 +51,8 @@
     flex-direction: column;
     text-align: center;
     height: 100%;
-
+    
+    
     @include for-wide-layout {
       flex-direction: row;
       text-align: left;
@@ -98,10 +104,14 @@
 
         p {
           color: $blue-300;
-          padding-inline: 80px;
-          font-size: 16px;
-
-          height:116px ;
+          padding-inline: 0;
+          font-size: 14px;
+          
+          @include for-normal-layout {
+            padding-inline: 80px;
+            font-size: 16px;
+            height: 116px;
+          }
 
           @include for-wide-layout {
             padding-inline: 0px;
@@ -156,10 +166,17 @@
       align-items: end;
       justify-content: center;
       img {
-        width: 400px;
-        max-height: 700px;
-        
+        width: 350px;
+        max-height: 500px;
       }
+
+      @include for-normal-layout{
+        img {
+          width: 400px;
+          max-height: 700px;
+        }
+      }
+      
 
       @include for-wide-layout {
         align-items: center;
@@ -169,13 +186,13 @@
           max-height: 700px;
 
           filter: saturate(80%);
-        $fade-start: 75%;
-        -webkit-mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) $fade-start,
-            rgba(0, 0, 0, 0) 100%);
-        mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) $fade-start,
-            rgba(0, 0, 0, 0) 100%);
+          $fade-start: 75%;
+          -webkit-mask-image: linear-gradient(to bottom,
+              rgba(0, 0, 0, 1) $fade-start,
+              rgba(0, 0, 0, 0) 100%);
+          mask-image: linear-gradient(to bottom,
+              rgba(0, 0, 0, 1) $fade-start,
+              rgba(0, 0, 0, 0) 100%);
         }
       }
     }
