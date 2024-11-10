@@ -3,35 +3,34 @@
   background-size: cover;
   background-position: center;
   color: white;
-
-
-
+  
+  
   .content {
     display: flex;
     flex-direction: column;
 
     gap: 65px;
     max-width: 765px;
-    margin: 40px auto;
+    margin: 40px auto 0px;
     padding-inline: 34px;
 
     @include for-wide-layout {
       gap: 24px;
       max-width: 1110px;
-      margin: 48px auto;
+      margin: 48px auto 0px;
       padding-inline: 0px;
     }
 
     h2 {
       display: flex;
       align-items: center;
+      text-transform: uppercase;
 
       gap: 23px;
       font-size: 20px;
       letter-spacing: 3px;
-      text-transform: uppercase;
 
-      @include for-wide-layout{
+      @include for-wide-layout {
         gap: 19px;
         font-size: 28px;
         letter-spacing: 4px;
@@ -71,7 +70,11 @@
 
         align-items: center;
         text-align: center;
-        padding: 82px 47px;
+        padding: 82px 0px;
+        
+        @include for-normal-layout{
+          padding: 82px 47px;
+        }
 
         @include for-wide-layout {
           align-items: start;
@@ -101,12 +104,16 @@
 
         h1 {
           text-transform: uppercase;
-          
+
           margin-block: 28px 14px;
-          font-size: 5rem;
+          font-size: 4rem;
           letter-spacing: 0px;
 
-          @include for-wide-layout{
+          @include for-normal-layout {
+            font-size: 5rem;
+          }
+
+          @include for-wide-layout {
             margin-block: 40px 14px;
             font-size: 6.25rem;
             letter-spacing: -5px;
@@ -120,11 +127,16 @@
           color: $blue-300;
         }
 
-        p.text-9{
-          padding-inline: 45px;
-          font-size: 1rem;
+        p.text-9 {
+          padding-inline: 0px;
+          font-size: 0.85rem;
+        
+          @include for-normal-layout {
+            padding-inline: 45px;
+            font-size: 1rem;
+          }
 
-          @include for-wide-layout{
+          @include for-wide-layout {
             padding-inline: 0;
             font-size: 1.125rem;
           }
@@ -139,7 +151,7 @@
           background-color: #fff;
           margin-block: 24px;
 
-          @include for-wide-layout{
+          @include for-wide-layout {
             margin-block: 38px;
           }
         }
@@ -148,9 +160,15 @@
           text-transform: uppercase;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          column-gap: 24px;
-          padding-inline: 40px;
-          @include for-wide-layout{
+          column-gap: 0px;
+          padding-inline: 0px;
+
+          @include for-normal-layout {
+            column-gap: 24px;
+            padding-inline: 40px;
+
+          }
+          @include for-wide-layout {
             padding-inline: 0px;
 
           }
@@ -161,6 +179,11 @@
             flex-direction: column;
             gap: 10px;
 
+            .text-6{
+              @media(max-width: 375px){
+                font-size: 1.3rem;
+              }
+            }
           }
         }
       }
