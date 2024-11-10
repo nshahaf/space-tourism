@@ -1,4 +1,4 @@
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import CrewPage from './pages/CrewPage';
@@ -9,7 +9,7 @@ import data from './../data/data.json'
 function App() {
  
   return (
-    <>
+    <Router>
       <div className="app-container">
         <NavBar/>
         <Routes>
@@ -18,10 +18,15 @@ function App() {
           <Route path="/crew" element={<CrewPage crew={data.crew}/>}/> 
           <Route path="/destination" element={<DestinationPage dest={data.destinations}/>}/> 
           <Route path="/technology" element={<TechnologyPage tech={data.technology}/>}/> 
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
-    </>
+    </Router>
   );
+}
+
+function NotFoundPage() {
+  return <div>404 - Page Not Found</div>;
 }
 
 export default App;
