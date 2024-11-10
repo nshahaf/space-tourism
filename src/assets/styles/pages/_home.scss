@@ -2,27 +2,49 @@
     background-image: url("/src/assets/images/home/background-home-desktop.jpg");
     background-size: cover;
     background-position: center;
+    height: 100vh;
+
+    @include for-normal-layout{
+        height: auto;
+    }
+
+    @include for-wide-layout{
+        height: 100vh;
+    }
+    
 
     .center-content {
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
         height: 100%;
-        padding: 128px 0px;
+        padding: 0;
 
-        @include for-wide-layout{
+        @include for-normal-layout {
+            padding: 128px 0px;
+        }
+
+        @include for-wide-layout {
             justify-content: end;
             padding: 128px 165px;
         }
 
 
         .content {
-            display: grid;
-            grid-template-columns: 765px;
-            grid-template-rows: 312px 1fr;
-            margin-inline: auto;
-            gap: 87px;
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            @include for-normal-layout {
+                display: grid;
+                grid-template-columns: 765px;
+                grid-template-rows: 312px 1fr;
+                grid-template-rows: 360px 1fr;
+                margin-inline: auto;
+                gap: 87px;
+            }
+
             @include for-wide-layout {
                 grid-template-columns: 548px 1fr 272px;
                 grid-template-rows: 1fr;
@@ -36,39 +58,70 @@
                 justify-content: space-between;
                 color: white;
                 align-items: center;
-                height: 343px;
+                max-width: 365px;
 
-                @include for-wide-layout{
+                gap: 20px;
+                @include for-normal-layout {
+                    height: 343px;
+                    max-width: none;
+                }
+
+                @include for-wide-layout {
                     align-items: start;
                 }
 
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 18px;
 
-                h3,
+                    @include for-normal-layout {
+                        font-size: 28px;
+                    }
+                }
+
                 h1 {
                     text-transform: uppercase;
+                    font-size: 65px;
+
+                    @include for-normal-layout {
+                        font-size: 144px;
+                    }
                 }
+
+                p.text-9 {
+                    font-size: 14px;
+
+                    @include for-normal-layout{
+                        font-size: 18px;
+                    }
+
+                }
+
 
                 h3,
                 p.text-9 {
                     color: $blue-300;
-                    padding-inline: 95px;
                     text-align: center;
+                    padding-inline: 20px;
 
-                    @include for-wide-layout{
+                    @include for-normal-layout {
+                        padding-inline: 95px;
+                    }
+
+                    @include for-wide-layout {
                         text-align: start;
                         padding-inline: 0;
-                        
-
                     }
                 }
             }
 
             .button-container {
-                
+
                 display: flex;
                 align-items: center;
                 justify-self: center;
-                @include for-wide-layout{
+
+                @include for-wide-layout {
                     grid-column: 3;
                     justify-self: end;
                 }

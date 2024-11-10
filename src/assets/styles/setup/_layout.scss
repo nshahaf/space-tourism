@@ -6,10 +6,16 @@
 
 }
 
+@media (min-width: 765px) {
+  .app-container {
+    height: auto;
+  }
+}
+
 @media (min-width: 1200px) {
   .app-container {
     max-width: 1440px;
-    height: 1024px;
+    height: 100vh;
     margin: 0 auto;
     position: relative;
   }
