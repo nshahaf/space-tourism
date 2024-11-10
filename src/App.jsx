@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter as Router } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import CrewPage from './pages/CrewPage';
@@ -6,8 +6,8 @@ import DestinationPage from './pages/DestinationPage';
 import TechnologyPage from './pages/TechnologyPage';
 
 import data from './../data/data.json'
-function App() {
  
+function App() {
   return (
     <Router>
       <div className="app-container">

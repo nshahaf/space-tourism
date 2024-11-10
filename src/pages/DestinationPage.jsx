@@ -19,28 +19,28 @@ export default function DestinationPage({ dest }) {
             <div className="content-container">
               <div className="destination-nav text-8">
                 <a
-                  href="#moon"
+                  href="#"
                   onClick={() => setIdx(0)}
                   className={idx === 0 ? "active" : ""}
                 >
                   Moon
                 </a>
                 <a
-                  href="#mars"
+                  href="#"
                   onClick={() => setIdx(1)}
                   className={idx === 1 ? "active" : ""}
                 >
                   Mars
                 </a>
                 <a
-                  href="#europa"
+                  href="#"
                   onClick={() => setIdx(2)}
                   className={idx === 2 ? "active" : ""}
                 >
                   Europa
                 </a>
                 <a
-                  href="#titan"
+                  href="#"
                   onClick={() => setIdx(3)}
                   className={idx === 3 ? "active" : ""}
                 >

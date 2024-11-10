@@ -21,10 +21,10 @@ export default function CrewPage({ crew }) {
                   <p className="text-9">{bio}</p>
                 </motion.div>
                 <nav>
-                  <a href="#douglas" onClick={() => setIdx(0)} className={idx === 0 ? "active" : ""}></a>
-                  <a href="#mark" onClick={() => setIdx(1)} className={idx === 1 ? "active" : ""}></a>
-                  <a href="#victor" onClick={() => setIdx(2)} className={idx === 2 ? "active" : ""}></a>
-                  <a href="#anousheh" onClick={() => setIdx(3)} className={idx === 3 ? "active" : ""}></a>
+                  <a href="#" onClick={() => setIdx(0)} className={idx === 0 ? "active" : ""}></a>
+                  <a href="#" onClick={() => setIdx(1)} className={idx === 1 ? "active" : ""}></a>
+                  <a href="#" onClick={() => setIdx(2)} className={idx === 2 ? "active" : ""}></a>
+                  <a href="#" onClick={() => setIdx(3)} className={idx === 3 ? "active" : ""}></a>
                 </nav>
               </div>
               <div className="img-container">
