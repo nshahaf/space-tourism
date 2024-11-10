@@ -5,6 +5,6 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), svgr()],
-    // base: mode === 'production' ? '/space-tourism' : '/',
+    base: mode === 'production' ? '/space-tourism/' : '/',
   };
 });
