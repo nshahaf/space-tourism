@@ -4,6 +4,9 @@
     background-position: center;
     color: white;
     text-transform: uppercase;
+    @include for-wide-layout{
+        height: 100vh;
+    }
 
     .content-container {
         display: flex;
@@ -110,7 +113,11 @@
 
             p {
                 text-transform: none;
-                padding-inline: 100px;
+                
+                padding-inline: 15px;
+                @include for-normal-layout{
+                    padding-inline: 100px;
+               }
 
             }
 

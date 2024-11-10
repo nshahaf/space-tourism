@@ -3,6 +3,10 @@
   background-size: cover;
   background-position: center;
   color: white;
+  @include for-wide-layout{
+    height: 100vh;
+    overflow-y: hidden;
+  }
   
   
   .content {
