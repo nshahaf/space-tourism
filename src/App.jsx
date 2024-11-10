@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import CrewPage from './pages/CrewPage';
@@ -9,7 +9,7 @@ import data from './../data/data.json'
  
 function App() {
   return (
-    <Router>
+    <>
       <div className="app-container">
         <NavBar/>
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
-    </Router>
+    </>
   );
 }
 
