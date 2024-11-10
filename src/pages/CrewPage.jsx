@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 export default function CrewPage({ crew }) {
   const [idx, setIdx] = useState(0);
-
+  const baseUrl = import.meta.env.VITE_BASE_URL
   const { role, name, bio, images: { png: img }, } = crew[idx];
   return (
     <div className="crew-container page">
@@ -28,7 +29,7 @@ export default function CrewPage({ crew }) {
                 </nav>
               </div>
               <div className="img-container">
-                <motion.img src={img} alt="crew member image" key={img} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/>
+                <motion.img src={baseUrl + img} alt="crew member image" key={img} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/>
               </div>
             </div>
           </AnimatePresence>

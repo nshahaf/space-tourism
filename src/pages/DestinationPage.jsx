@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 export default function DestinationPage({ dest }) {
   const [idx, setIdx] = useState(0);
-
+  const baseUrl = import.meta.env.VITE_BASE_URL
   const data = dest[idx];
   return (
     <div className="destination-container page">
@@ -14,7 +15,7 @@ export default function DestinationPage({ dest }) {
         <AnimatePresence mode="wait">
           <div className="destination">
             <div className="img-container">
-              <motion.img src={data.images.png} alt="destination image" key={data.images.png} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/>
+              <motion.img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/>
             </div>
             <div className="content-container">
               <div className="destination-nav text-8">

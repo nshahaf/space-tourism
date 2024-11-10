@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react"
 import { motion, AnimatePresence } from 'framer-motion';
 import useBreakpoint from "../hooks/useBreakpoint";
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export default function TechnologyPage({ tech }) {
   const [idx, setIdx] = useState(0)
@@ -40,7 +41,7 @@ export default function TechnologyPage({ tech }) {
               <motion.p className="text-9" key={desc} {...animationProps}>{desc}</motion.p>
             </div>
             <div className="img-container">
-              <motion.img src={imgSrc} alt="" key={imgSrc} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} />
+              <motion.img src={baseUrl + imgSrc +''} alt="" key={imgSrc} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} />
             </div>
           </div>
         </AnimatePresence>
