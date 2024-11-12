@@ -6,6 +6,7 @@ import DestinationPage from './pages/DestinationPage';
 import TechnologyPage from './pages/TechnologyPage';
 
 import data from './../data/data.json'
+
  
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/technology" element={<TechnologyPage tech={data.technology}/>}/> 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        
       </div>
     </>
   );
