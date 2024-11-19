@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from 'framer-motion';
-
 
 export default function DestinationPage({ dest }) {
   const [idx, setIdx] = useState(0);
@@ -12,10 +10,8 @@ export default function DestinationPage({ dest }) {
         <h2 className="text-5">
           <span>01</span>Pick your destination
         </h2>
-        <AnimatePresence mode="wait">
           <div className="destination">
             <div className="img-container">
-              {/* <motion.img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/> */}
               <img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png}/>
             </div>
             <div className="content-container">
@@ -50,7 +46,6 @@ export default function DestinationPage({ dest }) {
                 </a>
               </div>
 
-              {/* <motion.div key={data.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}> */}
               <div key={data.name}>
                 <h1 className="text-2">{data.name}</h1>
                 <p className="text-9">{data.description}</p>
@@ -69,7 +64,6 @@ export default function DestinationPage({ dest }) {
               </div>
             </div>
           </div>
-        </AnimatePresence>
       </div>
     </div>
   );
