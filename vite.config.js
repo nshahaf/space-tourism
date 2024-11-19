@@ -6,5 +6,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), svgr()],
     base: mode === 'production' ? '/space-tourism' : '/',
+    // build: {outDir: '../backend/public', emptyOutDir: true} //*fullstack config option
   };
 });

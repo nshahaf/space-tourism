@@ -15,33 +15,34 @@ export default function DestinationPage({ dest }) {
         <AnimatePresence mode="wait">
           <div className="destination">
             <div className="img-container">
-              <motion.img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/>
+              {/* <motion.img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}/> */}
+              <img src={baseUrl + data.images.png +''} alt="destination image" key={data.images.png}/>
             </div>
             <div className="content-container">
               <div className="destination-nav text-8">
                 <a
-                  href="#"
+                  href="#moon"
                   onClick={() => setIdx(0)}
                   className={idx === 0 ? "active" : ""}
                 >
                   Moon
                 </a>
                 <a
-                  href="#"
+                  href="#mars"
                   onClick={() => setIdx(1)}
                   className={idx === 1 ? "active" : ""}
                 >
                   Mars
                 </a>
                 <a
-                  href="#"
+                  href="#europa"
                   onClick={() => setIdx(2)}
                   className={idx === 2 ? "active" : ""}
                 >
                   Europa
                 </a>
                 <a
-                  href="#"
+                  href="#titan"
                   onClick={() => setIdx(3)}
                   className={idx === 3 ? "active" : ""}
                 >
@@ -49,7 +50,8 @@ export default function DestinationPage({ dest }) {
                 </a>
               </div>
 
-              <motion.div key={data.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}>
+              {/* <motion.div key={data.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0}} transition={{ duration: 0.5, ease: "easeInOut" }}> */}
+              <div key={data.name}>
                 <h1 className="text-2">{data.name}</h1>
                 <p className="text-9">{data.description}</p>
                 <div className="line"></div>
@@ -64,7 +66,7 @@ export default function DestinationPage({ dest }) {
                     <p className="text-6">{data.travel}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </AnimatePresence>

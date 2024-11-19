@@ -31,17 +31,20 @@ export default function TechnologyPage({ tech }) {
         <AnimatePresence mode="wait">
           <div className="content">
             <nav className="text-4">
-              <a href="#" onClick={() => setIdx(0)} className={idx === 0 ? "active" : ""}>1</a>
-              <a href="#" onClick={() => setIdx(1)} className={idx === 1 ? "active" : ""}>2</a>
-              <a href="#" onClick={() => setIdx(2)} className={idx === 2 ? "active" : ""}>3</a>
+              <a href="#vehicle" onClick={() => setIdx(0)} className={idx === 0 ? "active" : ""}>1</a>
+              <a href="#spaceport" onClick={() => setIdx(1)} className={idx === 1 ? "active" : ""}>2</a>
+              <a href="#capsule" onClick={() => setIdx(2)} className={idx === 2 ? "active" : ""}>3</a>
             </nav>
             <div className="info" >
               <h4 className="text-4">The terminology...</h4>
-              <motion.h3 className="text-3" key={name} {...animationProps}>{name}</motion.h3>
-              <motion.p className="text-9" key={desc} {...animationProps}>{desc}</motion.p>
+              {/* <motion.h3 className="text-3" key={name} {...animationProps}>{name}</motion.h3> */}
+              <h3 className="text-3" key={name}>{name}</h3>
+              {/* <motion.p className="text-9" key={desc} {...animationProps}>{desc}</motion.p> */}
+              <p className="text-9" key={desc} >{desc}</p>
             </div>
             <div className="img-container">
-              <motion.img src={baseUrl + imgSrc +''} alt="" key={imgSrc} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} />
+              {/* <motion.img src={baseUrl + imgSrc +''} alt="" key={imgSrc} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} /> */}
+              <img src={baseUrl + imgSrc +''} alt="" key={imgSrc} />
             </div>
           </div>
         </AnimatePresence>
