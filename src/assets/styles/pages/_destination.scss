@@ -3,12 +3,13 @@
   background-size: cover;
   background-position: center;
   color: white;
-  @include for-wide-layout{
+
+  @include for-wide-layout {
     height: 100vh;
     overflow-y: hidden;
   }
-  
-  
+
+
   .content {
     display: flex;
     flex-direction: column;
@@ -61,6 +62,10 @@
         padding: 0;
         width: 300px;
 
+        img {
+          animation: fadeIn 0.85s forwards;
+        }
+
         @include for-wide-layout {
           padding: 127px 29.5px;
           width: auto;
@@ -75,8 +80,11 @@
         align-items: center;
         text-align: center;
         padding: 82px 0px;
-        
-        @include for-normal-layout{
+
+
+
+
+        @include for-normal-layout {
           padding: 82px 47px;
         }
 
@@ -104,6 +112,10 @@
           a.active {
             border-bottom: 2px solid rgba(255, 255, 255, 1);
           }
+        }
+
+        .content-info {
+          animation: fadeIn 1s forwards;
         }
 
         h1 {
@@ -134,7 +146,7 @@
         p.text-9 {
           padding-inline: 0px;
           font-size: 0.9rem;
-          
+
           @include for-normal-layout {
             padding-inline: 45px;
             font-size: 1rem;
@@ -172,6 +184,7 @@
             padding-inline: 40px;
 
           }
+
           @include for-wide-layout {
             padding-inline: 0px;
 
@@ -183,8 +196,8 @@
             flex-direction: column;
             gap: 10px;
 
-            .text-6{
-              @media(max-width: 375px){
+            .text-6 {
+              @media(max-width: 375px) {
                 font-size: 1.3rem;
               }
             }

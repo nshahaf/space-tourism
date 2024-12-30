@@ -2,7 +2,8 @@
   background-image: url(/images/crew/background-crew-desktop.jpg);
   background-size: cover;
   background-position: center;
-  @include for-wide-layout{
+
+  @include for-wide-layout {
     height: 100vh;
   }
 
@@ -37,10 +38,11 @@
       margin-bottom: 40px;
       font-size: 20px;
       letter-spacing: 3px;
-      
-      @include for-normal-layout{
+
+      @include for-normal-layout {
         margin-bottom: 65px;
       }
+
       @include for-wide-layout {
         font-size: 28px;
         letter-spacing: 4px;
@@ -54,8 +56,8 @@
     flex-direction: column;
     text-align: center;
     height: 100%;
-    
-    
+
+
     @include for-wide-layout {
       flex-direction: row;
       text-align: left;
@@ -69,6 +71,7 @@
       flex-direction: column;
       align-content: center;
 
+
       @include for-wide-layout {
         gap: 40px;
         flex: 1;
@@ -79,6 +82,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        animation: fadeIn 0.85s forwards;
 
         .text-4,
         .text-3 {
@@ -109,7 +113,7 @@
           color: $blue-300;
           padding-inline: 0;
           font-size: 14px;
-          
+
           @include for-normal-layout {
             padding-inline: 80px;
             font-size: 16px;
@@ -168,22 +172,26 @@
       display: flex;
       align-items: end;
       justify-content: center;
+
       img {
         width: 350px;
         max-height: 500px;
+
+        animation: fadeIn 0.85s forwards;
       }
 
-      @include for-normal-layout{
+      @include for-normal-layout {
         img {
           width: 400px;
           max-height: 700px;
         }
       }
-      
+
 
       @include for-wide-layout {
         align-items: center;
         justify-content: right;
+
         img {
           width: 500px;
           max-height: 700px;

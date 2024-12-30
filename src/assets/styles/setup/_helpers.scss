@@ -1,4 +1,3 @@
-
 .text-center {
     text-align: center;
 }
@@ -13,7 +12,7 @@
         flex: 1;
     }
 
-    
+
     &.column {
         flex-direction: column;
     }
@@ -22,11 +21,11 @@
         justify-content: center;
     }
 
-    &.justify-end{
+    &.justify-end {
         justify-content: end;
     }
 
-    &.space-between{
+    &.space-between {
         justify-content: space-between;
     }
 
@@ -50,20 +49,25 @@
 .text-1 {
     font-size: 9rem;
 }
+
 .text-2 {
     font-size: 6.25rem;
 }
+
 .text-3 {
     font-size: 3.5rem;
 }
+
 .text-4 {
     font-size: 2rem;
 }
+
 .text-5 {
     font-family: barlow-condensed-regular;
     font-size: 1.75rem;
     letter-spacing: 4px;
 }
+
 .text-6 {
     font-size: 1.75rem;
 }
@@ -91,7 +95,18 @@
     width: 100%;
     height: 100%;
     padding-top: $nav-height;
-    @include for-wide-layout{
+
+    @include for-wide-layout {
         padding-top: $nav-height + $nav-top-margin;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

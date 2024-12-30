@@ -4,7 +4,8 @@
     background-position: center;
     color: white;
     text-transform: uppercase;
-    @include for-wide-layout{
+
+    @include for-wide-layout {
         height: 100vh;
     }
 
@@ -15,7 +16,7 @@
         height: 100%;
         padding: 40px 0px 40px 0px;
         margin-inline: auto;
-        
+
         @include for-wide-layout {
             gap: 24px;
             max-width: 1275px;
@@ -57,7 +58,7 @@
 
             justify-content: center;
             margin-block: 32px;
-            
+
             @include for-wide-layout {
                 flex-direction: column;
                 gap: 32px;
@@ -87,7 +88,7 @@
                     color: black;
                 }
 
-                @include for-wide-layout{
+                @include for-wide-layout {
                     width: 80px;
                     height: 80px;
                 }
@@ -98,8 +99,7 @@
             color: $blue-300;
             text-align: center;
             grid-row: 3;
-            
-           
+
 
             .text-4 {
                 font-size: 1.5rem;
@@ -109,15 +109,18 @@
                 padding-block: 20px;
                 color: rgba(255, 255, 255, 0.9);
                 font-size: 2.5rem;
+                animation: fadeIn 1s forwards;
             }
 
             p {
                 text-transform: none;
-                
+                animation: fadeIn 1s forwards;
+
                 padding-inline: 15px;
-                @include for-normal-layout{
+
+                @include for-normal-layout {
                     padding-inline: 100px;
-               }
+                }
 
             }
 
@@ -134,7 +137,7 @@
                     font-size: 3.5rem;
                 }
 
-                p{
+                p {
                     padding-inline: 0px 25px;
                 }
             }
@@ -143,7 +146,8 @@
         .img-container {
             // padding-block: 100px;
             grid-row: 1;
-            @include for-wide-layout{
+
+            @include for-wide-layout {
                 grid-column: 3;
                 grid-row: 1;
             }
@@ -151,6 +155,8 @@
             img {
                 height: auto;
                 width: 100%;
+                animation: fadeIn 1s forwards;
+
             }
         }
 
