@@ -22,7 +22,12 @@ Users should be able to:
 - FramerMotion
 - Responsive design
 
+### Screenshots:
+![image](https://github.com/user-attachments/assets/2249e450-f163-4e89-8de3-f2281c98c74e)
 
+![image](https://github.com/user-attachments/assets/764f7db0-4e43-4dbb-81a5-2393ac85a99c)
+
+![image](https://github.com/user-attachments/assets/e4ff99b8-3116-42fa-918d-0ea3316820e7)
 
 
 
